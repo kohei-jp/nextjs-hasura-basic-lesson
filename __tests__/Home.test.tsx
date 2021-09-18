@@ -5,5 +5,5 @@ import Home from '../pages/index'
 // Homeコンポーネントに'Next.js!'というテキストが存在するか
 it('Should render title text', () => {
   render(<Home />)
-  expect(screen.getByText('Next.js!')).toBeInTheDocument()
+  expect(screen.getByText('Next.js + GraphQL')).toBeInTheDocument()
 })
