@@ -9,8 +9,8 @@ import { Layout } from '../components/Layout'
 // 直接、HasuraのGraphQLサーバーからデータを取得
 const FetchMain: VFC = () => {
   const { data, error } = useQuery<GetUsersQuery>(GET_USERS, {
-    //fetchPolicy: 'network-only',
-    fetchPolicy: 'cache-and-network',
+    fetchPolicy: 'network-only', // 毎回cacheを見ずに、graphQLサーバーにアクセス
+    // fetchPolicy: 'cache-and-network',
     //fetchPolicy: 'cache-first',
     //fetchPolicy: 'no-cache',
   })
