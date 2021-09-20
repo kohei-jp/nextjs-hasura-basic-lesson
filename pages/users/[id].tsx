@@ -17,7 +17,6 @@ interface Props {
 }
 
 const UserDetail: VFC<Props> = ({ user }) => {
-  console.log("hello")
   if (!user) {
     return <Layout title="loading">Loading...</Layout>
   }
@@ -69,6 +68,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       user: data.users_by_pk,
     },
-    revalidate: 1,
+    revalidate: 10,
   }
 }

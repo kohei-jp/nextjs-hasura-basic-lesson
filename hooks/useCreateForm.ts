@@ -27,7 +27,6 @@ export const useCreateForm = () => {
   }, [])
   // useCallbackで再レンダリングを防ぐ.
   const printMsg = useCallback(() => {
-    console.log('Hello')
   }, [])
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
