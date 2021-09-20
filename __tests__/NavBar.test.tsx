@@ -9,7 +9,8 @@
   import { setupServer } from 'msw/node'
   import { handlers } from '../mock/handlers'
   // import 'setimmediate'
-
+  process.env.NEXT_PUBLIC_HASURA_URL = 'https://basic-lesson-hasura2.hasura.app/v1/graphql'
+  
   initTestHelpers() // 初期化
 
   const server = setupServer(...handlers) // mock-serverを立てる
