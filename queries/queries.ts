@@ -39,7 +39,7 @@ export const GET_USERBY_ID = gql`
   }
 `
 
-export const CREATED_USER = gql`
+export const CREATE_USER = gql`
   mutation CreateUser($name: String!) {
     insert_users_one(object: {name: $name}) {
       id

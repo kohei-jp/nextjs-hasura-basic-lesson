@@ -15,13 +15,14 @@ const createApolloClient = () => {
     link: new HttpLink({
       uri: 'https://basic-lesson-hasura2.hasura.app/v1/graphql',
       headers: {
-        'x-hasura-admin-secret': process.env.NEXT_PUBLIC_HASURA_KEY,
+        'x-hasura-admin-secret': 'https://basic-lesson-hasura2.hasura.app/v1/graphql',
       },
     }),
     cache: new InMemoryCache(),
   })
 }
-export const initializeApollo = (initialState = null) => {　
+
+export const initializeApollo = (initialState = null) => {
   // client-sideのrendingの場合、apolloClientに値があるのでそれを返す
   const _apolloClient = apolloClient ?? createApolloClient()
   // For SSG and SSR always create a new Apollo Client
